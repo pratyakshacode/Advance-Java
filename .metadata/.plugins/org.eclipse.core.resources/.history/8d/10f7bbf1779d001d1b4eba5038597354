@@ -1,0 +1,70 @@
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import java.sql.*;
+
+@WebServlet("/jdbc")
+public class JdbcServletProgram13 extends HttpServlet{
+	
+	public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
+		
+		String ename = null, dept = null;
+		int eno = -1, sal = -1;
+		Connection con = null;
+		
+		String url = "jdbc:mysql://localhost:3306/javadatabase";
+		String uName = "root";
+		String pass = "Pr@1yaksha";
+		
+		PrintWriter print = res.getWriter();
+		print.println("Outing the method");
+		
+		try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		
+		con = DriverManager.getConnection(url, pass, uName);
+		
+		Statement st = con.createStatement();
+		
+		ResultSet rs = st.executeQuery("SELECT eno, ename, department, sal FROM EMPLOYEE WHERE ename='suresh' ");
+		
+		while(rs.next()){
+			
+			eno = rs.getInt(0);
+			ename = rs.getString(1);
+			dept = rs.getString(2);
+			sal = rs.getInt(4);
+		}
+		
+		PrintWriter out = res.getWriter();
+		
+		out.println("Employee No : " + eno);
+		out.println("Employee name : " + ename);
+		out.println("Employee department : " + dept);
+		out.println("Employee salary : " + sal);
+		
+		
+		
+		
+		} catch(Exception e) {
+			System.out.println("Database Exception Occured");
+			e.printStackTrace();
+		}
+		
+		finally {
+			
+			try {
+			con.close();
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.container {
+	
+	display: flex;
+	border: 2px solid black;
+	height: 300px;
+	width: 300px;
+	align-item : center;
+	justify-content: center;
+	margin: 0px auto;
+	border-radius : 7px;
+    background: linear-gradient(to bottom, #08afd5, #787777);
+    color: white;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	
+}
+
+form input {
+	margin: 10px;
+	border-radius: 7px;
+	width: 200px;
+	height:20px
+}
+
+#btn {
+	background: #2dcbef;
+	border: 0px solid;
+	padding: 5px;
+	margin:20px;
+	border-radius: 7px;
+	color: white;
+	transition: 0.2s;
+	
+}
+
+#btn:hover{
+	border: 1px solid black;
+}
+

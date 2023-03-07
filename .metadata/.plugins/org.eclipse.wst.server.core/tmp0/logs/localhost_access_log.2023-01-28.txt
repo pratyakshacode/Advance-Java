@@ -1,0 +1,9 @@
+127.0.0.1 - - [28/Jan/2023:11:26:43 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [28/Jan/2023:11:26:45 +0530] "GET /JSPApp/exam.jsp HTTP/1.1" 200 325
+0:0:0:0:0:0:0:1 - - [28/Jan/2023:11:26:45 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [28/Jan/2023:12:10:29 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [28/Jan/2023:12:10:29 +0530] "GET /New/cookiecheck HTTP/1.1" 500 1165
+0:0:0:0:0:0:0:1 - - [28/Jan/2023:12:10:54 +0530] "GET /New/cookiecheck HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [28/Jan/2023:12:12:50 +0530] "GET /New/cookiecheck?name=Pratyaksha&pass=pass1 HTTP/1.1" 200 7
+0:0:0:0:0:0:0:1 - - [28/Jan/2023:12:28:58 +0530] "GET /New/RequestDispatch.jsp HTTP/1.1" 500 335
+0:0:0:0:0:0:0:1 - - [28/Jan/2023:13:00:47 +0530] "GET /New/RequestDispatch.jsp HTTP/1.1" 500 335

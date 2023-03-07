@@ -1,0 +1,7 @@
+<web-app>
+
+<display-name>SessionTracking</display-name>
+ <welcome-file-list>
+  <welcome-file>SessionObject.jsp</welcome-file>
+ </welcome-file-list>
+</web-app>
